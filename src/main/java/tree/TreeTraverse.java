@@ -144,13 +144,17 @@ public class TreeTraverse {
         Queue<TreeNode> queue = new ConcurrentLinkedQueue();
         queue.offer(head);
         while(!queue.isEmpty()){
-            TreeNode poll = queue.poll();
-            System.out.print(poll.value + "  ");
-            if(poll.left != null){
-                queue.offer(poll.left);
-            }
-            if(poll.right != null){
-                queue.offer(poll.right);
+            int size = queue.size();
+            for(int i = 0 ; i < size ; i ++){
+                TreeNode poll = queue.poll();
+                System.out.print(poll.value + "  ");
+
+                if(poll.left != null){
+                    queue.offer(poll.left);
+                }
+                if(poll.right != null){
+                    queue.offer(poll.right);
+                }
             }
         }
     }
