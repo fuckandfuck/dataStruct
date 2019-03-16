@@ -89,6 +89,7 @@ public class ArithmeticOfSinglyList {
         ListNode head2 = middleNode.getNextNode();
         middleNode.setNextNode(null);
         ListNode head1 = head;
+
         return merge(guiBingSort(head1), guiBingSort(head2));
     }
 
