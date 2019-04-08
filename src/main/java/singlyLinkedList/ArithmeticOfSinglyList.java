@@ -225,5 +225,6 @@ public class ArithmeticOfSinglyList {
         System.out.println("----归并算法测试-----");
         ListNode head = generate(5, 7, 6, 4, 1);
         iterate(guiBingSort(head));
+        //tag test
     }
 }
